@@ -1,0 +1,31 @@
+{
+  "name": "rakesh",
+  "version": "1.2.2",
+  "description": "",
+  "main": "Hello.js",
+  "bin": {
+    "rakesh": "npm-cli.js"
+  },
+  "dependencies": {
+   "apiai": "^2.0.5",
+   "body-parser": "^1.15.1",
+   "botbuilder": "^3.1.1",
+   "console-stamp": "^0.2.2",
+   "express": "^4.13.4",
+   "node-uuid": "^1.4.7"
+ },
+  "scripts": {
+    "start": "node Hello.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rakesh031986jha/Innovation.git"
+  },
+  "author": "Rakesh jha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rakesh031986jha/Innovation/issues"
+  },
+  "homepage": "https://github.com/rakesh031986jha/Innovation#readme"
+}
