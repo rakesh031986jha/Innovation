@@ -15,17 +15,8 @@
    "node-uuid": "^1.4.7"
  },
   "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rakesh031986jha/Innovation.git"
+    "start": "node app.js"
   },
   "author": "Rakesh jha",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rakesh031986jha/Innovation/issues"
-  },
-  "homepage": "https://github.com/rakesh031986jha/Innovation#readme"
+  "license": "ISC"
 }
