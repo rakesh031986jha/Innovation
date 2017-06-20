@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.post ('/',function(request,response){
  console.log(JSON.stringify(request));
  var apiagentreq= request.body.result && request.body.result.parameters;
- var resagent='Your ticket has been successful book  train name  from Station name  To to sation name  $ToStation travel date:-';
+ var resagent='Your ticket has been successful book';
  console.log('request are'+apiagentreq);
  return response.json({
    speech:resagent,
