@@ -2,10 +2,10 @@
 let Assistant = require('actions-on-google').ApiAiAssistant;
 let request = require('http');
 let express = require('express');
-let body-parser = require('body-parser')
+let bodyParser  = require('body-parser')
 let app = express();
-app.use(body-parser.urlencoded({extended: true}));
-app.use(body-parser({type:'application/json'}));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.post('/', function (req, res) {
