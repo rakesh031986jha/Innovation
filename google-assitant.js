@@ -2,12 +2,14 @@
 let Assistant = require('actions-on-google').ApiAiAssistant;
 let request = require('http');
 let express = require('express');
+let body-parser = require('body-parser')
 let app = express();
-
+app.use(body-parser.urlencoded({extended: true}));
+app.use(body-parser({type:'application/json'}));
 
 
 app.post('/', function (req, res) {
-  console.log("Request is "+req.body);
+  console.log(JSON.stringify(req.body));
   const assistant = new Assistant({request: req, response: res});
 
   function simpleResponse (Assistant) {
