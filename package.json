@@ -15,15 +15,11 @@
    "node-uuid": "^1.4.7"
  },
   "scripts": {
-<<<<<<< HEAD
-    "start": "node app.js",
+    "start": "node citi.js",
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rakesh031986jha/Innovation.git"
-=======
-    "start": "node app.js"
->>>>>>> 87690073f1bb73f0a1ed4e60c8d98213d9d70475
   },
   "author": "Rakesh jha",
   "license": "ISC"
