@@ -14,7 +14,7 @@ console.log("Request is "+JSON.stringify(req.body))
   app.ask({speech: 'Howdy! I can tell you fun facts about '
           })
   };
-assistant.handleRequest(simpleResponse);
+Assistant.handleRequest(simpleResponse);
 });
 
 
