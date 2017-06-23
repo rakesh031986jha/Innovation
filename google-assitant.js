@@ -7,6 +7,7 @@ let app = express();
 
 
 app.post('/', function (req, res) {
+  const assistant = new Assistant({request: req, response: res});
 console.log("Request is "+JSON.stringify(req.body))
   function simpleResponse (Assistant) {
     //const app = new Assistant({request: req,response: res});
@@ -14,7 +15,7 @@ console.log("Request is "+JSON.stringify(req.body))
   app.ask({speech: 'Howdy! I can tell you fun facts about '
           })
   };
-Assistant.handleRequest(simpleResponse);
+assistant.handleRequest(simpleResponse);
 });
 
 
