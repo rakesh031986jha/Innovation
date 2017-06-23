@@ -16,11 +16,8 @@
  },
   "scripts": {
     "start": "node citi.js",
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rakesh031986jha/Innovation.git"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rakesh jha",
   "license": "ISC"
-}
+  }
