@@ -12,19 +12,13 @@
    "botbuilder": "^3.1.1",
    "console-stamp": "^0.2.2",
    "express": "^4.13.4",
-   "node-uuid": "^1.4.7"
+   "node-uuid": "^1.4.7",
+   "actions-on-google" :"^1.0.0"
+
  },
   "scripts": {
-<<<<<<< HEAD
-    "start": "node app.js",
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rakesh031986jha/Innovation.git"
-=======
-    "start": "node app.js"
->>>>>>> 87690073f1bb73f0a1ed4e60c8d98213d9d70475
+    "start": "node google-assitant.js"
   },
   "author": "Rakesh jha",
   "license": "ISC"
-}
+  }
