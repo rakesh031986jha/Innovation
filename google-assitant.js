@@ -7,7 +7,7 @@ let app = express();
 
 
 app.post('/', function (req, res) {
-  console.log("Request is "+(req.body));
+  console.log("Request is "+(req));
   const assistant = new Assistant({request: req, response: res});
 
   function simpleResponse (Assistant) {
