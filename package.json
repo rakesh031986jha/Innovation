@@ -12,11 +12,11 @@
    "botbuilder": "^3.1.1",
    "console-stamp": "^0.2.2",
    "express": "^4.13.4",
-   "node-uuid": "^1.4.7"
+   "node-uuid": "^1.4.7",
+   "actions-on-google" :"^1.0.0"
  },
   "scripts": {
-    "start": "node citi.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node google-assitant.js"
   },
   "author": "Rakesh jha",
   "license": "ISC"
