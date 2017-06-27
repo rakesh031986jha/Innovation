@@ -14,7 +14,7 @@ app.post('/', function (req, res) {
 // for google assistant request
   if(req.body.originalRequest.source==='google'){
       console.log("comeing in side ");
-  googleRequest.simpleResponse(req);
+  googleRequest.simpleResponse(req, res);
 }
    // For slack request
   if(req.body.originalRequest.source==='slack'){
