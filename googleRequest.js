@@ -14,6 +14,6 @@ function simpleResponse (req) {
 assistant.handleRequest(simpleResponse);
 
 }
-module.exports.googleRequest = googleRequest;
+
 
 
