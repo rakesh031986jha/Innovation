@@ -13,7 +13,7 @@ app.post('/', function (req, res) {
   console.log(JSON.stringify(req.body));
 // for google assistant request
   if(req.body.originalRequest.source==='google'){
-      console.log("comeing in side ");
+    console.log("comeing in side ");
   googleRequest.simpleResponse(req, res);
 }
    // For slack request
