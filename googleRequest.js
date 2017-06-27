@@ -16,4 +16,4 @@ assistant.handleRequest(simpleResponse);
 }
 
 
-
+var exports = module.exports = {};
