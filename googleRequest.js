@@ -15,9 +15,7 @@ function simpleResponse (req, res) {
          }
 
 
-    const actionMap = new Map();
-    actionMap.set(WELCOME_INTENT, welcomeIntent);
-    assistant.handleRequest(actionMap);
+    assistant.handleRequest(assistant);
 
 
 }
