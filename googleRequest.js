@@ -9,7 +9,7 @@ function simpleResponse (req, res) {
     //  function mainIntent (assistant) {
         if (assistant.getRawInput() === 'Hi') {
           console.log("Preparing response 2");
-       assistant.tell('Welcome to cityassistant..how can i help you...');
+       assistant.tell('Welcome how can i help you');
        console.log("Preparing response 3");
       }
 
