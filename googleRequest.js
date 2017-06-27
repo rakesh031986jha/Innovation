@@ -7,7 +7,7 @@ function simpleResponse (req, res) {
 
     console.log("Preparing response ");
     //  function mainIntent (assistant) {
-        if (assistant.getRawInput() === 'Hi') {
+        if (assistant.getRawInput() === 'hi') {
           console.log("Preparing response 2");
        assistant.tell('Welcome how can i help you');
        console.log("Preparing response 3");
