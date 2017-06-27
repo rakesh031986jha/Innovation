@@ -13,7 +13,6 @@ function simpleResponse (req, res) {
        console.log("Preparing response 3");
       }
 
-
     assistant.handleRequest(assistant);
 }
 
