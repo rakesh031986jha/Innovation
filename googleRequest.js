@@ -16,4 +16,6 @@ assistant.handleRequest(simpleResponse);
 }
 
 
-var exports = module.exports = {};
+var exports = module.exports = {
+  simpleResponse: simpleResponse()
+};
