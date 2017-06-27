@@ -25,7 +25,7 @@ console.log('inside look up intent');
   const compName = appapi.getArgument('company_name');
   const year=appapi.getArgument('date-period');
   const financialdata=appapi.getArgument('finanacial_balance_data');
-  console.log('arguments are'+compName)
+  console.log('arguments are'+compName +'year'+year+'financialdata'+financialdata)
   appapi.tell(' We have got the data you asked for.You asked for company name  ' +
   compName + 'for year'+year + ' for'+ financialdata);
   parsherData.processJSON(compName,year,financialdata);
