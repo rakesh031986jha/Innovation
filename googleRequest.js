@@ -7,14 +7,12 @@ function simpleResponse (req, res) {
 
     console.log("Preparing response ");
       function mainIntent (assistant) {
-        if (assistant.getRawInput() === 'Hi') {
+        if (assistant.getRawInputs() === 'Hi') {
        assistant.tell('How can i help you!');
       }
-}
+    }
 
     assistant.handleRequest(assistant);
-
-
 }
 
 var exports = module.exports = {
