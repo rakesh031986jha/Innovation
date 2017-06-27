@@ -2,7 +2,7 @@
 let Assistant = require('actions-on-google').ApiAiAssistant;
 let express = require('express');
 
-function simpleResponse (req. res) {
+function simpleResponse (req, res) {
   const assistant = new Assistant({request: req, response: res});
 
     console.log("Preparing response ");
@@ -14,8 +14,6 @@ function simpleResponse (req. res) {
 assistant.handleRequest(simpleResponse);
 
 }
-
-
 var exports = module.exports = {
   simpleResponse: simpleResponse
 };
