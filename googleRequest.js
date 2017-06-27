@@ -11,25 +11,17 @@ function simpleResponse (req, res) {
     //          displayText: 'Howdy! I can tell you fun facts about almost any ' +
       //              'number. What do you have in mind?'})
 
-  function welcomeIntent (assistant) {
-    assistant.ask('Welcome to cityassistant..how can i help you...',
-    ['Say any number', 'Pick a number', 'We can stop here. See you soon.']);
-                    }
+      function mainIntent (assistant) {
+          const inputPrompt = assistant.buildInputPrompt(true, '<speak>Hi! <break time="1"/> ' +
+          'I can read out an ordinal like ' +
+          '<say-as interpret-as="ordinal">123</say-as>. Say a number.</speak>',
+          ['I didn\'t hear a number', 'If you\'re still there, what\'s the number?', 'What is the number?']);
+            assistant.ask(inputPrompt);
+         }
+                    
 
-
-function rawInput (assistant) {
-      if (assistant.getRawInput() === 'bye') {
-       assistant.tell('Goodbye!');
-      } else {
-       const inputPrompt = assistant.buildInputPrompt(true, '<speak>You said, <say-as interpret-as="ordinal">' +
-          assistant.getRawInput() + '</say-as></speak>',
-            ['I didn\'t hear a number', 'If you\'re still there, what\'s the number?', 'What is the number?']);
-        assistant.ask(inputPrompt);
-      }
-    }
     const actionMap = new Map();
-    actionMap.set(WELCOME_INTENT, welcomeIntent);
-    actionMap.set(LOOKUP_INTENT, lookupdataIntent);
+    actionMap.set(assistant.WELCOME_INTENT, welcomeIntent);
     assistant.handleRequest(actionMap);
 
 
