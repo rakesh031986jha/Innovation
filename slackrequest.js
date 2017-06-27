@@ -10,3 +10,4 @@ return response.json({
   source:''
 });
 }
+module.exports.slackrequest = slackrequest;
