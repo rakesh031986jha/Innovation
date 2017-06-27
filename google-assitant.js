@@ -1,5 +1,3 @@
-
-//let Assistant = require('actions-on-google').ApiAiAssistant;
 let request = require('http');
 let express = require('express');
 let bodyParser  = require('body-parser')
@@ -13,7 +11,8 @@ app.post('/', function (req, res) {
   console.log(JSON.stringify(req.body));
 // for google assistant request
   if(req.body.originalRequest.source==='google'){
-      googleRequest.simpleResponse(req, res);
+    console.log("comeing in side ");
+  googleRequest.simpleResponse(req, res);
 }
    // For slack request
   if(req.body.originalRequest.source==='slack'){
