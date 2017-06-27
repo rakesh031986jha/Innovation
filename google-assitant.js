@@ -20,7 +20,6 @@ app.post('/', function (req, res) {
   if(req.body.originalRequest.source==='slack'){
     slackrequest.slackReq();
 }
-  
 });
 
 //Assistant.handleRequest(simpleResponse);
