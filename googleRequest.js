@@ -11,9 +11,7 @@ function simpleResponse (req, res) {
   actionMap.set(LOOKUP_INTENT, lookupdataIntent);
   appapi.handleRequest(actionMap);
 
-
 };
-
 
 function welcomeIntent (appapi) {
   console.log('inside welcomeIntent');
@@ -21,15 +19,17 @@ function welcomeIntent (appapi) {
 }
 
 function lookupdataIntent (appapi) {
+  var parsherData = require('./MicrostrategyCitiReportParser');
+
 console.log('inside look up intent');
-//let contexts = appapi.getContexts();
-//console.log('CONTEXTS are'+contexts)
   const compName = appapi.getArgument('company_name');
   const year=appapi.getArgument('date-period');
   const financialdata=appapi.getArgument('finanacial_balance_data');
   console.log('arguments are'+compName)
   appapi.tell(' We have got the data you asked for.You asked for company name  ' +
   compName + 'for year'+year + ' for'+ financialdata);
+  parsherData.processJSON(compName,year,financialdata);
+
 }
 
 
