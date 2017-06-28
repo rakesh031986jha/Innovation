@@ -1,4 +1,4 @@
-var jsonData = require('../../data/MicrostrategyCitiReport.json');
+var jsonData = require('./MicrostrategyCitiReport.json');
 
 function lookForMetricsIndex(metricsKey) {
   var i=0;
