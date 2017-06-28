@@ -11,9 +11,6 @@ function simpleResponse (req, res) {
   actionMap.set(LOOKUP_INTENT, lookupdataIntent);
   appapi.handleRequest(actionMap);
 
-};
-
-
 
 };
 
@@ -28,38 +25,44 @@ console.log('inside look up intent');
 var jsonParser = require('../../dataprocess/microstrategyReportParser');
 //let contexts = appapi.getContexts();
 //console.log('CONTEXTS are'+contexts)
-const finData='financial balance sheet.';
+//const finData='financial balance sheet.';
   const compName = appapi.getArgument('company_name');
   const year=appapi.getArgument('year');
 
   const financialdata=appapi.getArgument('finanacial_balance_data');
-  const financedataforParse=finData+financialdata;
-  console.log('arguments are'+compName);
+  //const financedataforParse=finData+financialdata;
+  console.log('company name is'+compName);
   console.log('year is'+year);
-    console.log('financedataforParse is'+financedataforParse);
-var result=jsonParser.processJSON(compName,year,financedataforParse);
-console.log('result is'+result);
+    console.log('financedataforParse is'+financialdata);
+    var result=jsonParser.processJSON(compName,year,financialdata);
+    console.log('result is'+result);
 
 if(result==null){
   appapi.tell(' Sorry we dont have the data for what you have asked..You asked for company name  ' +
   compName + ' for year '+year + ' for '+ financialdata );
 }
 else{
-  appapi.tell(' We have got the data you asked for.You asked for company name  ' +
-  compName + ' for year '+year + ' for '+ financialdata +'. It is '+result);
+/*  appapi.tell(' We have got the data you asked for.You asked for company name  ' +
+  compName + ' for year '+year + ' for '+ financialdata +'. It is '+result);*/
+
+  appapi.ask(appapi.buildRichResponse()
+      .addSimpleResponse({speech: '  It is '+result ,
+        displayText: ' It is '+result})
+        .addBasicCard(appapi.buildBasicCard(' We have got the data you asked for.You asked for company name  ' +
+        compName + ' for year '+year + ' for '+ financialdata +'. It is '+result+'  . Do u need anything else?')
+             .setTitle('Citi assistant data you asked for:')
+             .addButton('Read more')
+             .setImage('https://careerarc-com.s3.amazonaws.com/companies/142/logos/primary_190_thumb_med.jpg?1472507336', 'Image alternate text')
+)
+
+      .addSuggestions(
+        ['yes', 'no'])
+
+    );
+
+
+
 }
-
-  var parsherData = require('./MicrostrategyCitiReportParser');
-
-console.log('inside look up intent');
-  const compName = appapi.getArgument('company_name');
-  const year=appapi.getArgument('date-period');
-  const financialdata=appapi.getArgument('finanacial_balance_data');
-  console.log('arguments are'+compName +'year'+year+'financialdata'+financialdata)
-  appapi.tell(' We have got the data you asked for.You asked for company name  ' +
-  compName + 'for year'+year + ' for'+ financialdata);
-  parsherData.processJSON(compName,year,financialdata);
-
 }
 
 
